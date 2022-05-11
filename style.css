@@ -1,0 +1,330 @@
+@font-face {
+  font-family : 'Daum_Regular';
+  src : url(font/Daum_Regular.ttf)
+}
+
+@font-face {
+  font-family : 'Daum_SemiBold';
+  src : url(font/Daum_SemiBold.ttf)
+}
+
+
+*{
+  margin:0 auto;
+  
+}
+
+.topbar {
+width: 100vw;
+background-color: rgb(255, 255, 255);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
+height: 11vh;
+box-shadow: 2.5px 2.5px 2.5px 2.5px #c0c0c0;
+padding-top: 2vh;
+overflow: hidden;
+/* opacity: 0; */
+transition: 0.3s;
+}
+
+/* .topbar:hover {
+  opacity: 100%;
+} */
+
+
+.topnav {
+    width: 50vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    height: 11vh;
+    width: 11vw;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(174, 255, 185);
+    color: black;
+  }
+  
+  .topnav a.active {
+    /* background-color: #04AA6D; */
+    color: white;
+  }
+
+/* topbar */
+
+.botbar {
+  width: 100vw;
+  background-color: rgb(241, 243, 244);
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  border-top:2px solid rgb(108, 255, 152);
+}
+
+.navbar {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(180, 255, 118);
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .player {
+    width: 40vw;
+    color: #fff;
+
+  }
+
+    /* bottom bar */
+
+
+  .p1 {
+      width: 100vw;
+      height: 90vh;
+      margin-top: 15vh;
+      /* background-color: #04AA6D; */
+  }
+
+  .search {
+    position: relative;
+    width: 450px;
+    margin-top: 5vh;
+  }
+  
+  input {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .searcher {
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .titlebox {
+    width: 20vw;
+    text-align: center;
+    transform : rotate(0.04deg); 
+    padding: 3%;
+  }
+
+  .krtitle {
+    font-family: 'Daum_SemiBold';
+    font-size: 50px;
+    color: #3E3E3E;
+  }
+
+  .entitle {
+    font-family: 'Daum_Regular';
+    font-size: 20px;
+    color: #707070;
+  }
+
+/* ------------ */
+
+
+    .soundwave {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .waveimg {
+      height: 10vh;
+    }
+
+    .slidebox {max-width:700px;margin:0 auto;position:relative;}
+    .slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+    .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#fff;width:100%;transition:all 1s;}
+    .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+    .slidebox .slidelist .slideitem > a img {max-width:100%;}
+
+    .slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+    .slidebox .slide-control [class*="control"] label.prev {left:-50px;background:#333 url('./source/left-arrow.png') center center / 50% no-repeat;}
+    .slidebox .slide-control [class*="control"] label.next {right:-50px;background:#333 url('./source/right-arrow.png') center center / 50% no-repeat;}
+
+    [name="slide"] {display:none;}
+    #slide01:checked ~ .slidelist .slideitem {left:0;}
+    #slide02:checked ~ .slidelist .slideitem {left:-100%;}
+    #slide03:checked ~ .slidelist .slideitem {left:-200%;}
+    #slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+    .slide-control [class*="control"] {display:none;}
+    #slide01:checked ~ .slide-control .control01 {display:block;}
+    #slide02:checked ~ .slide-control .control02 {display:block;}
+    #slide03:checked ~ .slide-control .control03 {display:block;}
+    #slide04:checked ~ .slide-control .control04 {display:block;}
+
+    .slideitem {
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .slideitem:hover {
+      transform: scale(105%);
+    }
+
+
+/* ------------ */
+
+    .p2 {
+      width: 100vw;
+      height: 90vh;
+      /* background-color: #0483aa; */
+    }
+
+    .p2bg {
+      height: 50vh;
+      margin-top: 10vh;
+      margin-left: 5vw;
+    }
+
+
+    .rec1, .rec2, .rec3 {
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 2.5px 2.5px 2.5px 2.5px #c0c0c0;
+      position: absolute;
+      cursor: pointer;
+      font-family: 'Daum_Regular';
+      text-align: left;
+      color: #3E3E3E;
+      rotate: 0.04deg;
+      transition: 0.5s;
+    }
+
+    .rec1:hover, .rec2:hover, .rec3:hover {
+      transform: scale(110%);
+    }
+
+    .rec1 {
+      height: 30vh;
+      width: 8vw;
+      margin-top: 5vh;
+      margin-left: -10vw;
+    }
+
+    .rec2 {
+      height: 30vh;
+      width: 8vw;
+      margin-top: 5vh;
+    }
+
+    .rec3 {
+      height: 30vh;
+      width: 8vw;
+      margin-top: 40vh;
+      margin-left: -5vw;
+    }
+
+    /* ------------ */
+
+    .p3 {
+      width: 100vw;
+      height: 90vh;
+      margin-top: 15vh;
+      /* background-color: #04AA6D; */
+  }
+
+  .tab-area {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Daum_SemiBold';
+    font-size: 32pt;
+  }
+  
+  
+  /* 2. tab 메뉴 부분 디자인 */
+  .tab-area input {
+    display: none;
+  }  
+  
+  .tab-area label {
+    margin-left: auto;
+    margin-right: auto;  }
+    
+  /* label에 마우스 올렸을 때 */
+  .tab-area label:hover {
+    cursor: pointer; /*마우스 모양 변경*/
+  }
+    
+  /* tab-area 안에 존재하는 input 태그가 체크되었을 때, 
+  체크된 input 태그 다음에 등장하는 label의 css 값 */
+  .tab-area input:checked + label {
+    /* 해당 메뉴가 선택된 상태인지 아닌지를 사용자에게 알려줄 수 있음 */
+    font-weight: bold;
+    color: rgb(76, 187, 122);
+  }
+    
+  
+  /* 3. tab 내용 부분 디자인 */
+  .tab-content {
+    width: 100%; /*부모 div width와 같은 width를 가진다.*/
+    height: 50vh;
+    display: none; /*기본 값일땐 화면에 표시하지 않음. 체크 상태일 때, 화면에 표시되어야 함 */
+    border-top: 2px solid rgba(200, 200, 200, 0.534);/*탭 메뉴와 내용구분선*/
+  }
+    
+  
+  /* input 태그가 체크 상태일떼, 이에 대응하는 content?를 display에 표시하도록 설정 */
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2,
+  #tab3:checked ~ #content3,
+  #tab4:checked ~ #content4 {
+    display: flex;
+  }
+  
+  
+  /* .red {
+    background: red;
+  }
+  
+  .blue {
+    background: blue;
+  }
+  
+  .yellow {
+    background: yellow;
+  }
+   */

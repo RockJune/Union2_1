@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="topnav">
+            <a class="active" href="#p1"><img src="source/Chart.png" style="height: 9vh;"></a>
+            <a href="#p2"><img src="source/Genre.png" style="height: 9vh;"></a>
+            <a href="#contact"><img src="source/Media.png" style="height: 9vh;"></a>
+            <a href="#about"><img src="source/News.png" style="height: 9vh;"></a>
+            <a href="#about"><img src="source/Mypage.png" style="height: 9vh;"></a>
+        </div>
+    </div>
+
+    <div class="botbar">
+    <div class="navbar">
+        <!-- <a href="#home" class="active">Home</a>
+        <a href="#news">News</a> -->
+            <audio class="player" autoplay controls> <source src="" type="audio/mp3"> </audio>
+        <!-- <a href="#contact">Contact</a> -->
+      </div>
+      </div>
+
+
+    <div class="p1" name="p1">
+
+        <div class="search">
+            <input type="text" placeholder="검색...">
+            <img class="searcher" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+        </div>
+
+        <div class="titlebox">
+        <a class="krtitle">추천 최신 앨범</a> 
+        <a class="entitle">Newest Album Recommendation</a>
+        </div>
+
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <input type="radio" name="slide" id="slide04">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <a><img src="./source/slide01.png"></a>
+                </li>
+                <li class="slideitem">
+                    <a><img src="./source/slide02.png"></a>
+                </li>
+                <li class="slideitem">
+                    <a><img src="./source/slide03.png"></a>
+                </li>
+                <li class="slideitem">
+                    <a><img src="./source/slide04.png"></a>
+                </li>
+                
+            </ul>
+            <div class="slide-control">
+                <div class="control01">
+                    <label for="slide04" class="prev"></label>
+                    <label for="slide02" class="next"></label>
+                </div>
+                <div class="control02">
+                    <label for="slide01" class="prev"></label>
+                    <label for="slide03" class="next"></label>
+                </div>
+                <div class="control03">
+                    <label for="slide02" class="prev"></label>
+                    <label for="slide04" class="next"></label>
+                </div>
+                <div class="control04">
+                    <label for="slide03" class="prev"></label>
+                    <label for="slide01" class="next"></label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="soundwave"><img class="waveimg" src="source/waveimg.png"></div>
+
+    <div class="p2" name="p2">
+
+        <div class="titlebox">
+        <a class="krtitle">사용자 맞춤 추천</a> 
+        <a class="entitle">Custom User Recommendation</a>
+
+        <div class="rec1">
+            <img src="source/rec1.png" style="height: 17vh;">
+            <a style="font-family: 'Daum_SemiBold';"><br>&nbsp;&nbsp;The Code</a>
+            <a>
+                <br>
+                &nbsp;&nbsp;싸이퍼(Ciipher)
+                <br><br>
+                &nbsp;&nbsp;♥ 138
+            <a>
+        </div>
+        <div class="rec2">
+            <img src="source/rec2.png" style="height: 17vh;">
+            <a style="font-family: 'Daum_SemiBold';"><br>&nbsp;&nbsp;잠시멈출래</a>
+            <a>
+                <br>
+                &nbsp;&nbsp;공기남
+                <br><br>
+                &nbsp;&nbsp;♥ 143
+            <a>
+        </div>
+        <div class="rec3">
+            <img src="source/rec3.png" style="height: 17vh;">
+            <a style="font-family: 'Daum_SemiBold';"><br>&nbsp;&nbsp;먼 훗날에</a>
+            <a>
+                <br>
+                &nbsp;&nbsp;전상근
+                <br><br>
+                &nbsp;&nbsp;♥ 130
+            <a>
+        </div>
+
+        <div class="p2bg">
+            <img src="source/bg1.png" style="height: 50vh;">
+        </div>
+    </div>
+
+    </div>
+
+    
+    <div class="soundwave"><img class="waveimg" src="source/waveimg.png"></div>
+
+
+    <div class="p3">
+
+        <div class="tabmenu">
+
+            <p></p>
+            <p></p>
+            <p></p>
+            <div class="tab-area">
+                <input type="radio" name="tabs" id="tab1" checked>
+                <label for="tab1">예매</label>
+                <input type="radio" name="tabs" id="tab2">
+                <label for="tab2">이벤트</label>
+                <input type="radio" name="tabs" id="tab3">
+                <label for="tab3">이슈</label>
+       
+                <div id="content1" class="tab-content red">
+                    <img src="source/tab1.png">
+                </div>
+                <div id="content2" class="tab-content blue">
+                </div>
+                <div id="content3" class="tab-content yellow">
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    
+</body>
+
+</html>

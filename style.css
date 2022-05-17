@@ -272,6 +272,7 @@ transition: 0.3s;
     flex-wrap: wrap;
     font-family: 'Daum_SemiBold';
     font-size: 32pt;
+    color: #707070;
   }
   
   
@@ -328,3 +329,70 @@ transition: 0.3s;
     background: yellow;
   }
    */
+
+   .fake {
+    display: inline-block;
+    float: left;
+    background: #15f6ff;
+    color: #00767b;
+    padding: 0;
+    width: 15vw;
+    position: relative;
+    vertical-align: top;
+
+  }
+  .fake span {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%);
+    opacity: 0;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .fake span small {
+    display: block;
+    font-size: 0.8rem;
+  }
+  .fake span:before {
+    content: "+";
+    color: white;
+    display: inline-block;
+    position: absolute;
+    left: -5rem;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 1.5rem;
+    line-height: 0.5;
+    height: 1rem;
+    width: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    transform: scale(0.5) rotate(45deg);
+    transform-origin: 50%;
+    transition: 0.24s all cubic-bezier(0.5, 0.19, 0.79, 0.57);
+    transition-delay: 0.3s;
+    z-index: 5;
+    opacity: 0;
+  }
+  .fake:hover {
+    cursor: zoom-in;
+  }
+  .fake:hover span:before, .fake:hover span {
+    opacity: 1;
+  }
+  .fake:hover span:before {
+    transform: scale(1) rotate(0deg);
+    left: -5rem;
+  }
+  .fake.long {
+    width: 66.6%;
+  }
+  .fake:hover img {
+    opacity: 0.4;
+  }
+
+  .modal-content, img, .fake span, .fake, .overlay {
+    transition: all 0.25s cubic-bezier(0.5, 0.19, 0.79, 0.57);
+  }

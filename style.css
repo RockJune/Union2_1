@@ -14,6 +14,160 @@
   
 }
 
+
+.menu{
+	margin-top:8%; /* separates menu 8% from top */
+	float:left; /* menu goes left */
+	position:fixed; /* menu is fixed */
+  z-index: 10;
+	}
+.menu ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	}
+.menu ul li{
+	width:140px; /* width of links */
+	height:100px; /* height of links */
+	margin-bottom:-1px;
+	position:relative;
+	text-align:center; /* text goes to the center */
+	overflow:hidden;
+	background:rgb(28, 110, 93); /* background color of links */
+	/* border:solid 1px #000; */
+	border-left:none;
+	-webkit-box-shadow:0 0 6px #333;
+	-moz-box-shadow:0 0 6px #333;
+	box-shadow:0 0 6px #333;
+	-webkit-transition:all 0.3s linear;
+	-moz-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	}
+.menu ul li:first-child{
+	border-top-right-radius:8px;
+	}
+.menu ul li:last-child{
+	border-bottom-right-radius:8px;
+	}
+.menu ul li a{
+	display:block;
+	width:100%;
+	height:100%;
+	font-family:'Daum_Regular'; /* call font */
+	text-decoration:none;
+	}	
+.menu .headline, .menu .description{
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	-webkit-transition:all 0.3s linear;
+	-moz-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	}
+.menu .headline{
+	display:inline;
+	padding:0 0 5px 0;
+	font-size:16px; /* font size of main titles */
+	color:rgb(255, 255, 255); /* color of main titles */
+	line-height:100px; /* separates title 100px from top */
+	text-transform:uppercase; /* from lowercase to uppercase */
+	text-shadow:0 0 4px #000;
+	/* border-bottom:solid 1px #404040; */
+	}
+.menu .description{
+	width:100%;
+	margin:0;
+	font-size:14px; /* font size of subtitles */
+	color:#333; /* color of subtitles */
+	filter:alpha(opacity=0);
+  	opacity:0;
+	}
+.menu ul li:hover{
+	width:165px; /* width of links on mouseover */
+	height:130px; /* height of links on mouseover */
+	background:rgb(156, 255, 214);
+	/* border:solid 1px #000; */
+	border-left:none;
+	border-radius:0 8px 8px 0;
+	-webkit-box-shadow:0 0 8px #333;
+	-moz-box-shadow:0 0 8px #333;
+	box-shadow:0 0 8px #333;
+	z-index:1;
+	}
+.menu ul li:hover .headline{
+	line-height:90px; /* separates title 90px from top on mouseover */
+	font-size:18px; /* font size of main titles on mouseover */
+	color:rgb(31, 31, 31); /* color of main titles on mouseover */
+	text-shadow:1px 1px 6px #333;
+	/* border-bottom:solid 1px #333; */
+	}	
+.menu ul li:hover .description{
+	margin-top:-20px; /* separates description -20px from top on mouseover */
+	filter:alpha(opacity=100);
+  	opacity:1;
+	}
+.menu ul li:active{
+	background:#999;
+	}	
+
+
+/*------------------------ */
+
+
+
+.topnav a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.topnav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.topnav a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: rgb(153, 255, 229);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+.topnav a {
+  position: relative;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: system-ui, sans-serif;
+}
+
+/* @media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+} */
+
+/* ---------------------- */
+
+
 .topbar {
 width: 100vw;
 background-color: rgb(255, 255, 255);
@@ -42,7 +196,7 @@ transition: 0.3s;
     align-items: center;
   }
   
-  .topnav a {
+  /* .topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -58,9 +212,8 @@ transition: 0.3s;
   }
   
   .topnav a.active {
-    /* background-color: #04AA6D; */
     color: white;
-  }
+  } */
 
 /* topbar */
 
@@ -114,6 +267,7 @@ transition: 0.3s;
       width: 100vw;
       height: 90vh;
       margin-top: 15vh;
+      overflow: hidden;
       /* background-color: #04AA6D; */
   }
 
@@ -209,6 +363,7 @@ transition: 0.3s;
     .p2 {
       width: 100vw;
       height: 90vh;
+      overflow: hidden;
       /* background-color: #0483aa; */
     }
 
@@ -262,6 +417,7 @@ transition: 0.3s;
       width: 100vw;
       height: 90vh;
       margin-top: 15vh;
+      overflow: hidden;
       /* background-color: #04AA6D; */
   }
 
@@ -273,6 +429,7 @@ transition: 0.3s;
     font-family: 'Daum_SemiBold';
     font-size: 32pt;
     color: #707070;
+
   }
   
   
@@ -283,7 +440,9 @@ transition: 0.3s;
   
   .tab-area label {
     margin-left: auto;
-    margin-right: auto;  }
+    margin-right: auto; 
+    background: linear-gradient(white,white,white,white,white,rgb(167, 231, 217),white,white,white);
+  }
     
   /* label에 마우스 올렸을 때 */
   .tab-area label:hover {
@@ -304,7 +463,8 @@ transition: 0.3s;
     width: 100%; /*부모 div width와 같은 width를 가진다.*/
     height: 50vh;
     display: none; /*기본 값일땐 화면에 표시하지 않음. 체크 상태일 때, 화면에 표시되어야 함 */
-    border-top: 2px solid rgba(200, 200, 200, 0.534);/*탭 메뉴와 내용구분선*/
+    background: linear-gradient(rgb(198, 219, 214), rgb(255, 255, 255));
+    /* border-top: 2px solid rgba(200, 200, 200, 0.534);탭 메뉴와 내용구분선 */
   }
     
   
@@ -333,10 +493,10 @@ transition: 0.3s;
    .fake {
     display: inline-block;
     float: left;
-    background: #15f6ff;
+    background: #002e24;
     color: #00767b;
     padding: 0;
-    width: 15vw;
+    width: 12.2vw;
     position: relative;
     vertical-align: top;
 
@@ -396,3 +556,15 @@ transition: 0.3s;
   .modal-content, img, .fake span, .fake, .overlay {
     transition: all 0.25s cubic-bezier(0.5, 0.19, 0.79, 0.57);
   }
+
+  .more {
+    position: absolute;
+    margin-left: 70vw;
+    font-size: 1.2vw;
+    margin-top: 2vh;
+    cursor: pointer;
+    color: #00865a;
+    text-decoration: underline;
+  }
+/* ---------------------------------- */
+
